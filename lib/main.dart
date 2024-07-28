@@ -8,8 +8,6 @@ void main(List<String> args) {
 }
 
 class Myapp extends StatefulWidget {
-  const Myapp({super.key});
-
   @override
   State<Myapp> createState() => _MyappState();
 }
@@ -26,10 +24,13 @@ class _MyappState extends State<Myapp> {
       ),
       body: Column(
         children: <Widget>[
-          TextField(
-            controller: nameController,
-            decoration: InputDecoration(
-              hintText: ("Enter Name"),
+          Padding(
+            padding: EdgeInsets.all(8),
+            child: TextField(
+              controller: nameController,
+              decoration: InputDecoration(
+                hintText: ("Enter Name"),
+              ),
             ),
           ),
           ElevatedButton(
